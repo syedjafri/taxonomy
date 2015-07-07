@@ -39,6 +39,7 @@ describe('RetiredForagerBee class functionality', function() {
   });
 
   it('should have a `treasureChest` property inherited from foragerBee that is set to an empty array `[]`', function() {
+      console.log(retiredForager);
     expect(retiredForager.treasureChest).to.be.a('array');
   });
 
@@ -47,6 +48,7 @@ describe('RetiredForagerBee class functionality', function() {
   it('should have an always winning `gamble` method that allows the bee to add a `treasure` to the `treasureChest`', function() {
     retiredForager.gamble();
     retiredForager.gamble();
+
     expect(retiredForager.treasureChest).to.have.length(2);
   });
 
